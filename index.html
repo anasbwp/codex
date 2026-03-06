@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D House Map Maker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>3D House Map Maker</h1>
+      <p>Design a quick house map and preview it in 3D.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Layout Controls</h2>
+
+        <label>
+          Map Width
+          <input id="mapWidth" type="range" min="2" max="12" step="1" value="8" />
+          <span id="mapWidthValue">8</span>
+        </label>
+
+        <label>
+          Map Depth
+          <input id="mapDepth" type="range" min="2" max="12" step="1" value="6" />
+          <span id="mapDepthValue">6</span>
+        </label>
+
+        <label>
+          Wall Height
+          <input id="wallHeight" type="range" min="2" max="8" step="1" value="3" />
+          <span id="wallHeightValue">3</span>
+        </label>
+
+        <div class="buttons">
+          <button id="newPlan">New Plan</button>
+          <button id="clearPlan">Clear</button>
+        </div>
+
+        <p class="hint">Click cells in the top-down map to add walls.</p>
+        <div id="grid" class="grid" aria-label="House map grid"></div>
+      </section>
+
+      <section class="viewer">
+        <h2>3D Preview</h2>
+        <div id="sceneContainer" class="scene"></div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
